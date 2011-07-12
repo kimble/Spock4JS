@@ -1,0 +1,21 @@
+apply plugin: 'eclipse'
+apply plugin: 'groovy'
+
+sourceCompatibility = 1.6
+
+repositories {
+    mavenCentral()
+    mavenRepo urls: "http://m2repo.spockframework.org/snapshots"
+}
+
+dependencies {
+    groovy group: 'org.codehaus.groovy', name: 'groovy', version: '1.7.10'
+    
+    compile "org.spockframework:spock-core:0.6-groovy-1.7-SNAPSHOT"
+
+    compile "rhino:js:1.7R2"
+    
+    compile "de.huxhorn.lilith:logback:0.9.40", "ch.qos.logback:logback-classic:0.9.28"
+    compile "org.slf4j:slf4j-api:1.6.1"
+    
+}
